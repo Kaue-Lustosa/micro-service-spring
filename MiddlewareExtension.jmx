@@ -20,10 +20,10 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get All Alphas">
           <stringProp name="HTTPSampler.domain">localhost</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
-          <stringProp name="HTTPSampler.path">post/banco/criar?id=1&amp;context=%7Buser1%2C123%7D</stringProp>
+          <stringProp name="HTTPSampler.path">/composite/alpha</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -33,10 +33,31 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Exit to TCP" enabled="false">
+
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Alpha">
           <stringProp name="HTTPSampler.domain">localhost</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
-          <stringProp name="HTTPSampler.path">exit?connection=TCP</stringProp>
+          <stringProp name="HTTPSampler.path">/composite/alpha</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <stringProp name="HTTPSampler.postBody">
+            {
+              "id": 1,
+              "name": "Alpha Test"
+            }
+          </stringProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get All Betas">
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.path">/composite/beta</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -46,80 +67,27 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="TCP Request" enabled="false">
-          <stringProp name="TCPSampler.server">localhost</stringProp>
-          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
-          <stringProp name="TCPSampler.port">8080</stringProp>
-          <boolProp name="TCPSampler.nodelay">false</boolProp>
-          <stringProp name="TCPSampler.timeout"></stringProp>
-          <stringProp name="TCPSampler.request">get/banco/saldo/id:1:context:{user1,123}</stringProp>
-          <boolProp name="TCPSampler.closeConnection">true</boolProp>
-          <stringProp name="ConfigTestElement.username"></stringProp>
-          <stringProp name="ConfigTestElement.password"></stringProp>
-        </TCPSampler>
-        <hashTree/>
-        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="TCP Exit" enabled="false">
-          <stringProp name="TCPSampler.server">localhost</stringProp>
-          <boolProp name="TCPSampler.reUseConnection">true</boolProp>
-          <stringProp name="TCPSampler.port">8080</stringProp>
-          <boolProp name="TCPSampler.nodelay">false</boolProp>
-          <stringProp name="TCPSampler.timeout"></stringProp>
-          <stringProp name="TCPSampler.request">exit/connection:HTTP</stringProp>
-          <boolProp name="TCPSampler.closeConnection">false</boolProp>
-          <stringProp name="ConfigTestElement.username"></stringProp>
-          <stringProp name="ConfigTestElement.password"></stringProp>
-        </TCPSampler>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Exit to UDP" enabled="false">
+
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Beta">
           <stringProp name="HTTPSampler.domain">localhost</stringProp>
           <stringProp name="HTTPSampler.port">8080</stringProp>
-          <stringProp name="HTTPSampler.path">exit?connection=UDP</stringProp>
+          <stringProp name="HTTPSampler.path">/composite/beta</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <stringProp name="HTTPSampler.postBody">
+            {
+              "id": 1,
+              "name": "Beta Test"
+            }
+          </stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <kg.apc.jmeter.samplers.UDPSampler guiclass="kg.apc.jmeter.samplers.UDPSamplerGui" testclass="kg.apc.jmeter.samplers.UDPSampler" testname="jp@gc - UDP Request" enabled="false">
-          <stringProp name="hostname">localhost</stringProp>
-          <stringProp name="port">8080</stringProp>
-          <boolProp name="waitresponse">true</boolProp>
-          <boolProp name="closechannel">false</boolProp>
-          <stringProp name="timeout">1000</stringProp>
-          <stringProp name="data">get/banco/saldo/id:1:context:{user1,123}</stringProp>
-          <stringProp name="encodeclass">kg.apc.jmeter.samplers.UDPSampler</stringProp>
-          <stringProp name="bind_address"></stringProp>
-          <stringProp name="bind_port"></stringProp>
-        </kg.apc.jmeter.samplers.UDPSampler>
-        <hashTree/>
-        <kg.apc.jmeter.samplers.UDPSampler guiclass="kg.apc.jmeter.samplers.UDPSamplerGui" testclass="kg.apc.jmeter.samplers.UDPSampler" testname="jp@gc - UDP Exit" enabled="false">
-          <stringProp name="hostname">localhost</stringProp>
-          <stringProp name="port">8080</stringProp>
-          <boolProp name="waitresponse">true</boolProp>
-          <boolProp name="closechannel">false</boolProp>
-          <stringProp name="timeout">1000</stringProp>
-          <stringProp name="data">exit/connection:HTTP</stringProp>
-          <stringProp name="encodeclass">kg.apc.jmeter.samplers.UDPSampler</stringProp>
-          <stringProp name="bind_address"></stringProp>
-          <stringProp name="bind_port"></stringProp>
-        </kg.apc.jmeter.samplers.UDPSampler>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP End" enabled="false">
-          <stringProp name="HTTPSampler.domain">localhost</stringProp>
-          <stringProp name="HTTPSampler.port">8080</stringProp>
-          <stringProp name="HTTPSampler.path">exit?connection=end</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
+
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
