@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/limits-service/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/netflix-eureka-naming-server/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceComposite/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceComposite/src/main/java/ufrn/imd/service/ServiceAlpha/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceComposite/src/main/java/ufrn/imd/service/ServiceBeta/pom.xml" />
       </list>
     </option>
   </component>

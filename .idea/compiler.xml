@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="netflix-eureka-naming-server" />
+        <module name="ServiceBeta" />
         <module name="spring-cloud-config-server" />
         <module name="APIGateway" />
+        <module name="FallBank" />
         <module name="limits-service" />
         <module name="ServiceAlpha" />
-        <module name="ServiceBeta1" />
+        <module name="service-composite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,10 +24,12 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="APIGateway" options="-parameters" />
       <module name="Bank" options="-parameters" />
+      <module name="FallBank" options="-parameters" />
       <module name="ServiceAlpha" options="-parameters" />
-      <module name="ServiceBeta1" options="-parameters" />
+      <module name="ServiceBeta" options="-parameters" />
       <module name="limits-service" options="-parameters" />
       <module name="netflix-eureka-naming-server" options="-parameters" />
+      <module name="service-composite" options="-parameters" />
       <module name="spring-cloud-config-server" options="-parameters" />
     </option>
   </component>
