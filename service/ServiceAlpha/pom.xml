@@ -11,12 +11,12 @@
     </parent>
 
     <groupId>ufrn.imd</groupId>
-    <artifactId>ServiceBeta</artifactId>
+    <artifactId>ServiceAlpha</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ServiceBeta</name>
-    <description>Service Beta</description>
+    <name>ServiceAlpha</name>
+    <description>Service Alpha</description>
 
     <properties>
         <java.version>11</java.version>
@@ -35,13 +35,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
-        <!-- Dependências dos serviços locais -->
-        <!--<dependency>
-            <groupId>ufrn.imd</groupId>
-            <artifactId>ServiceAlpha</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency> -->
 
         <!-- Testes -->
         <dependency>
@@ -83,4 +76,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

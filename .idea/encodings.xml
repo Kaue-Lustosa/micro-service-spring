@@ -12,6 +12,8 @@
     <file url="file://$PROJECT_DIR$/service-composite/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-composite/src/main/java/ufrn/imd/service/ServiceAlpha/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-composite/src/main/java/ufrn/imd/service/ServiceBeta/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/ServiceAlpha/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service/ServiceBeta/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-config-server/src/main/java" charset="UTF-8" />
   </component>
 </project>
