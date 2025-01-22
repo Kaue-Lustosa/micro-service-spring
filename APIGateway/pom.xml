@@ -9,47 +9,31 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ufrn.imd</groupId>
-    <artifactId>ServiceBeta1</artifactId>
+    <artifactId>APIGateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ServiceBeta1</name>
-    <description>ServiceBeta1</description>
+    <name>APIGateway</name>
+    <description>APIGateway</description>
     <url/>
     <licenses>
         <license/>
     </licenses>
     <developers>
-        <developer/>
+        <developer>
+            <id>your-id</id>
+            <name>Your Name</name>
+            <email>Your Email</email>
+        </developer>
     </developers>
     <scm>
-        <connection/>
-        <developerConnection/>
+        <connection>scm:git:https://github.com/your-repo</connection>
+        <developerConnection>scm:git:https://github.com/your-repo</developerConnection>
         <tag/>
-        <url/>
+        <url>https://github.com/your-repo</url>
     </scm>
     <properties>
         <java.version>21</java.version>
-        <spring-cloud.version>2024.0.0</spring-cloud.version>
+        <spring-cloud.version>2023.1.0</spring-cloud.version> <!-- Use uma versão disponível -->
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -62,6 +46,36 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <version>4.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -70,5 +84,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

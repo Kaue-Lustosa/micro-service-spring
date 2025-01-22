@@ -6,5 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("servicebeta")
 public class BetaServiceInterface {
-    @RequestMapping(method = RequestMethod.GET, value="/beta", consumes="application/json") String getData();
+    @RequestMapping(method = RequestMethod.GET, value = "/beta", consumes = "application/json")
+    public String getData() {
+        return null;
+    }
 }

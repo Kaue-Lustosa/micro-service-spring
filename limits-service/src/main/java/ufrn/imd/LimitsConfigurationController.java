@@ -1,8 +1,8 @@
 package ufrn.imd;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ufrn.imd.bean.LimitConfiguration;
 
 @RestController
 public class LimitsConfigurationController {
@@ -15,7 +15,12 @@ public class LimitsConfigurationController {
     }
 
     @GetMapping("/limits")
-    public LimitConfiguration retrieveLimits; Object FromConfigurations() {
-        return new LimitConfiguration(configuration.getMaximum(), configuration.getMinimum());
+    public LimitsConfigurationController retrieveLimits;
+
+    public LimitsConfigurationController(int maximum, int minimum) {
+    }
+
+    Object FromConfigurations() {
+        return new LimitsConfigurationController(configuration.getMaximum(), configuration.getMinimum());
     }
 }
