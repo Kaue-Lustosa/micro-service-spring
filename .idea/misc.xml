@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/service-composite/pom.xml" />
         <option value="$PROJECT_DIR$/service/ServiceAlpha/pom.xml" />
         <option value="$PROJECT_DIR$/service/ServiceBeta/pom.xml" />
+        <option value="$PROJECT_DIR$/model/pom.xml" />
       </list>
     </option>
   </component>
